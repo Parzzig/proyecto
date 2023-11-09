@@ -9,42 +9,50 @@
 
 @font-face {
     font-family:texto;
-    src: url(../font/BLKCHCRY.TTF);
+    src: url(../font/medieval-sharp.book.ttf);
 }
 
 @font-face {
     font-family:runas;
-    src: url(../font/RunyTunesRevisitedNF.ttf);
+    src: url(../font/Hummus.ttf);
 }
 
 /***************** layout general ******************/
 
-
 body{background-color: black;
     color: white;
     font-family:texto;
-    font-size:2em;}
+    font-size:1.6em;
+    background-image: url(../img/Fondo.jpg);
+    background-size: 25%;}
 
-#wrapper {width:80%;
+#wrapper {width:75%;
             margin:auto;
-            background-color:blueviolet;}
+            background-color:rgb(56, 113, 136);
+            padding: 2%;}
 
 /************* estilo de barra de navegacion *******************/
 
-nav {font-family:runas;}
+nav {font-family:runas;
+    text-align:center;}
 
 /************************* hero section ************************/
 
-#hero {background-image:url(../img/norse-mithology-bg.jpg);
+#hero {background-image:url(../img/ZeldaHero.jpg);
         height:95vh; /* forzar el alto de la hero para ver la foto */
         background-size:cover; /* estira la foto para verla entera */
-        background-position:66.66%;/* donde esta el punto de interes de la foto */
+        background-position:50%;/* donde esta el punto de interes de la foto */
         font-family:runas;
+        text-align:center;
         color:black;
-        font-size:1.5em;
+        font-size:2em;
         padding-left:20px;
         padding-top:20px;
         } 
+
+#intro {font-family:texto;}
+
+
 /************************* responsividad ***********************/
 
 @media only screen and (width<650px){
