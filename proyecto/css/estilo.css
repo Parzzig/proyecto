@@ -13,7 +13,7 @@
 }
 
 @font-face {
-    font-family:runas;
+    font-family:Zelda;
     src: url(../font/Hummus.ttf);
 }
 
@@ -33,8 +33,10 @@ body{background-color: black;
 
 /************* estilo de barra de navegacion *******************/
 
-nav {font-family:runas;
-    text-align:center;}
+nav {font-family:Zelda;
+    text-align:left;
+    padding-bottom:15px;
+    padding-left:10px;}
 
 /************************* hero section ************************/
 
@@ -42,16 +44,13 @@ nav {font-family:runas;
         height:95vh; /* forzar el alto de la hero para ver la foto */
         background-size:cover; /* estira la foto para verla entera */
         background-position:50%;/* donde esta el punto de interes de la foto */
-        font-family:runas;
+        font-family:Zelda;
         text-align:center;
         color:black;
         font-size:2em;
         padding-left:20px;
         padding-top:20px;
         } 
-
-#intro {font-family:texto;}
-
 
 /************************* responsividad ***********************/
 
