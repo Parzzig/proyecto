@@ -1,0 +1,52 @@
+/**********************************************************/
+/*              style for index.html                      */
+/*              autor: Gonzalo Navajas Garcia             */ 
+/*              version: 1.0                              */
+/*              coment: proyecto final de curso           */
+/**********************************************************/
+
+/************************ fuentes *************************/
+
+@font-face {
+    font-family:texto;
+    src: url(../font/BLKCHCRY.TTF);
+}
+
+@font-face {
+    font-family:runas;
+    src: url(../font/RunyTunesRevisitedNF.ttf);
+}
+
+/***************** layout general ******************/
+
+
+body{background-color: black;
+    color: white;
+    font-family:texto;
+    font-size:2em;}
+
+#wrapper {width:80%;
+            margin:auto;
+            background-color:blueviolet;}
+
+/************* estilo de barra de navegacion *******************/
+
+nav {font-family:runas;}
+
+/************************* hero section ************************/
+
+#hero {background-image:url(../img/norse-mithology-bg.jpg);
+        height:95vh; /* forzar el alto de la hero para ver la foto */
+        background-size:cover; /* estira la foto para verla entera */
+        background-position:66.66%;/* donde esta el punto de interes de la foto */
+        font-family:runas;
+        color:black;
+        font-size:1.5em;
+        padding-left:20px;
+        padding-top:20px;
+        } 
+/************************* responsividad ***********************/
+
+@media only screen and (width<650px){
+    #wrapper {width:95%;}
+}
