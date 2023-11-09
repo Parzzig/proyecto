@@ -17,6 +17,7 @@
     src: url(../font/Hummus.ttf);
 }
 
+* {box-sizing:border-box;}
 /***************** layout general ******************/
 
 body{background-color: black;
@@ -24,12 +25,15 @@ body{background-color: black;
     font-family:texto;
     font-size:1.6em;
     background-image: url(../img/Fondo.jpg);
-    background-size: 25%;}
+    background-size: 25%;
+    text-shadow:0px 0px 2px rgb(52, 255, 86);}
 
 #wrapper {width:75%;
             margin:auto;
             background-color:rgb(56, 113, 136);
-            padding: 2%;}
+            padding: 2%;
+            border-radius:20px;
+            box-shadow:0px 0px 70px rgb(70, 186, 221);}
 
 /************* estilo de barra de navegacion *******************/
 
@@ -49,7 +53,8 @@ nav {font-family:Zelda;
         color:black;
         font-size:2em;
         padding-left:20px;
-        padding-top:20px;
+        padding-top:130px;
+        border-radius:20px;
         } 
 
 /************************* responsividad ***********************/
