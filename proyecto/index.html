@@ -6,21 +6,178 @@
     <title>The legend of Zelda</title>
     <link rel="stylesheet" href="./css/estilo.css">
     <link rel="shortcut icon" href="./img/pngwing.com.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- el javaescript se enlaza con una etiqueta script-->
+    <script src="./js/funciones.js"></script>
 </head>
 <body>
     <div id="wrapper">
-        <nav>HOME - INTRO - GALLERY</nav>
+        <!-- copiado de responsive topnav en howto de w3schools -->
+        <nav>
+            <div class="topnav" id="myTopnav">
+                <a href="#" class="active">Home</a>
+                <a href="#intro">Intro</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#mitos">Mitos</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </nav>
         <section id="hero">  
             The Legend Of Zelda
         </section>
-        <section>
-<p>Sin reino. Sin recuerdos. Después de un letargo que ha durado 100 años, Link se despierta solo en un mundo que ya no recuerda.</p>
-<p>Ahora, el héroe legendario debe explorar ese extenso y misterioso mundo y recuperar sus recuerdos antes de que Hyrule esté perdido para siempre.</p>
-<p>Armado únicamente con lo que encuentre a su paso, Link emprenderá una aventura para buscar respuestas y obtener los recursos que necesita para sobrevivir.</p>
+        <section id="intro">
+        <div class="titulo">Historia</div>
+
+        <img id="drakkar" src="./img/drakkar.jpg" alt="Viking ship">
+
+        <p>Sin reino. Sin recuerdos. Después de un letargo que ha durado 100 años, Link se despierta solo en un mundo que ya no recuerda.</p>
+        <p>Ahora, el héroe legendario debe explorar ese extenso y misterioso mundo y recuperar sus recuerdos antes de que Hyrule esté perdido para siempre.</p>
+        <p>Armado únicamente con lo que encuentre a su paso, Link emprenderá una aventura para buscar respuestas y obtener los recursos que necesita para sobrevivir.</p>
         </section>
-        <section>
-            aqui va la gallery
+
+        <!-- Seccion de ejemplo de grid a 2 columnas : 1 contenedor grid-2 y 2 columnas dentro col-2 -->
+        
+        <section id="ejemplo-grid-2">
+            <div class="titulo">Grid de dos.....</div>
+            <div class="grid-2">
+                <div class="col-2">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat mollitia soluta minima sapiente ratione facere nihil quis quisquam, eveniet eligendi qui aperiam est numquam voluptatem perferendis eius quia dolorem dolores.</p>
+                <button>Read more</button>
+                </div>
+                <div class="col-2">
+                    <img src="https://fastly.picsum.photos/id/981/600/400.jpg?hmac=7RHzHYfQoHrGmcxzEvUPO52xdA0P9OMVsrHeCYe856E" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="https://fastly.picsum.photos/id/981/600/400.jpg?hmac=7RHzHYfQoHrGmcxzEvUPO52xdA0P9OMVsrHeCYe856E" alt="">
+                </div>
+                <div class="col-2">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat mollitia soluta minima sapiente ratione facere nihil quis quisquam, eveniet eligendi qui aperiam est numquam voluptatem perferendis eius quia dolorem dolores.</p>
+                    <button><b>Read more</b></button>
+                </div>
+            </div>
+
         </section>
+
+
+        <!-- accordion -->
+        <section id="Accordion">
+                <h1>my accordion</h1>
+            <ul>
+                <li>
+                    <input type="checkbox" checked="">
+                    <i></i>
+                    <h2>Accordion History</h2>
+                    <p>Accordions (from 19th-century German Akkordeon, from Akkord—"musical chord, concord of sounds") are a family of box-shaped musical instruments of the bellows-driven free-reed aerophone type,colloquially referred to as a squeezebox. A person who plays the accordion is called an accordionist. The concertina and bandoneón are related. The harmonium and American reed organ are in the same family, but are typically larger than an accordion and sit on a surface or the floor.</p>
+                </li>
+                <li>
+                    <input type="checkbox" checked="">
+                    <i></i>
+                    <h2>Accordion Body</h2>
+                    <p>he accordion's body consists of two wooden boxes joined together by the bellows. These boxes house reed chambers for the right- and left-hand manuals. Each side has grilles in order to facilitate the transmission of air in and out of the instrument, and to allow the sound to project better. The grille for the right-hand manual is usually larger and is often shaped for decorative purposes. The right-hand manual is normally used for playing the melody and the left-hand manual for playing the accompaniment; however, skilled players can reverse these roles and play melodies with the left hand</p>
+                </li>
+                <li>
+                    <input type="checkbox" checked="">
+                    <i></i>
+                    <h2>Accordion</h2>
+                    <p>Accordions are a family of box-shaped musical instruments of the bellows-driven free-reed aerophone type, colloquially referred to as a squeezebox. A person who plays the accordion is called an accordionist.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- galeria de fotos simple-->
+        <section id="fotos">
+
+            <div class="titulo">Fotos</div>
+            <div class="row">
+                <div class="column">
+                    <div class="container2">
+                        <img src="https://fastly.picsum.photos/id/591/400/300.jpg?hmac=xWQFdm3h_hqWFavANIA70eftZ951F8D0VJLLv507GeM" alt="Avatar" class="image">
+                        <div class="overlay">My Name is John</div>
+                    </div>
+                    <div class="container2">
+                        <img src="https://fastly.picsum.photos/id/834/400/500.jpg?hmac=k2duPnEyM12ytnpjLWNAFjStIYPbvLK7Ms0txn5cIkU" alt="Avatar" class="image">
+                        <div class="overlay">My Name is John</div>
+                    </div>
+                    <div class="container2">
+                        <img src="https://fastly.picsum.photos/id/989/700/200.jpg?hmac=xDQoetLmJ3dqifImTbinioLOh0cmExRvyS_c42XEsgM" alt="Avatar" class="image">
+                        <div class="overlay">My Name is John</div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="container2">
+                        <img src="https://fastly.picsum.photos/id/591/400/300.jpg?hmac=xWQFdm3h_hqWFavANIA70eftZ951F8D0VJLLv507GeM" alt="Avatar" class="image">
+                        <div class="overlay">My Name is John</div>
+                    </div>
+                    <div class="container2">
+                        <img src="https://fastly.picsum.photos/id/591/400/300.jpg?hmac=xWQFdm3h_hqWFavANIA70eftZ951F8D0VJLLv507GeM" alt="Avatar" class="image">
+                        <div class="overlay">My Name is John</div>
+                    </div>
+                    <div class="container2">
+                        <img src="https://fastly.picsum.photos/id/591/400/300.jpg?hmac=xWQFdm3h_hqWFavANIA70eftZ951F8D0VJLLv507GeM" alt="Avatar" class="image">
+                        <div class="overlay">My Name is John</div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="container2">
+                        <img src="https://fastly.picsum.photos/id/591/400/300.jpg?hmac=xWQFdm3h_hqWFavANIA70eftZ951F8D0VJLLv507GeM" alt="Avatar" class="image">
+                        <div class="overlay">My Name is John</div>
+                    </div>
+                    <div class="container2">
+                        <img src="https://fastly.picsum.photos/id/591/400/300.jpg?hmac=xWQFdm3h_hqWFavANIA70eftZ951F8D0VJLLv507GeM" alt="Avatar" class="image">
+                        <div class="overlay">My Name is John</div>
+                    </div>
+                    <div class="container2">
+                        <img src="https://fastly.picsum.photos/id/591/400/300.jpg?hmac=xWQFdm3h_hqWFavANIA70eftZ951F8D0VJLLv507GeM" alt="Avatar" class="image">
+                        <div class="overlay">My Name is John</div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="container2">
+                        <img src="https://fastly.picsum.photos/id/591/400/300.jpg?hmac=xWQFdm3h_hqWFavANIA70eftZ951F8D0VJLLv507GeM" alt="Avatar" class="image">
+                        <div class="overlay">My Name is John</div>
+                    </div>
+                    <div class="container2">
+                        <img src="https://fastly.picsum.photos/id/591/400/300.jpg?hmac=xWQFdm3h_hqWFavANIA70eftZ951F8D0VJLLv507GeM" alt="Avatar" class="image">
+                        <div class="overlay">My Name is John</div>
+                    </div>
+                    <div class="container2">
+                        <img src="https://fastly.picsum.photos/id/591/400/300.jpg?hmac=xWQFdm3h_hqWFavANIA70eftZ951F8D0VJLLv507GeM" alt="Avatar" class="image">
+                        <div class="overlay">My Name is John</div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- esta seccion tiene un grid de 4 columnas -->
+
+        <section id="gallery">
+            <div class="titulo">Gallery</div>
+
+            <div class="grid-4">
+                <div class="col-4">
+                    <img src="./img/odin-2.jpg" alt="Odin, the allfather">
+                    <h3>Odin, the allfather</h3>
+                </div>
+                <div class="col-4">
+                    <img src="./img/yggdrasil-2.jpg" alt="Yggdrasil">
+                    <h3>Yggdrasil</h3>
+                </div>
+                <div class="col-4">
+                    <img src="./img/valkyrie-2.jpg" alt="Valkyrie">
+                    <h3>Valkyrie</h3>
+                </div>
+                <div class="col-4">
+                    <img src="./img/ragnarok.jpg" alt="ragnarok">
+                    <h3>ragnarok</h3>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
         <footer>
             autor: Gonzalo Navajas Garcia
         </footer>

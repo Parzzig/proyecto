@@ -25,7 +25,7 @@ body{background-color: black;
     font-family:texto;
     font-size:1.6em;
     background-image: url(../img/Fondo.jpg);
-    background-size: 25%;
+    background-size: 38%;
     text-shadow:0px 0px 2px rgb(52, 255, 86);}
 
 #wrapper {width:75%;
@@ -35,12 +35,57 @@ body{background-color: black;
             border-radius:20px;
             box-shadow:0px 0px 70px rgb(70, 186, 221);}
 
+.titulo {font-family:Zelda;
+            text-align:center;
+            font-size: 1.5em;
+            margin:6vh;}
+
+html {scroll-behavior: smooth;}
+
 /************* estilo de barra de navegacion *******************/
 
 nav {font-family:Zelda;
     text-align:left;
     padding-bottom:15px;
-    padding-left:10px;}
+    padding-left:10px;
+    position: sticky;
+    top:0;
+    z-index:99;
+    opacity:0.9;}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color:rgb(0, 65, 90);
+    overflow: hidden;
+}
+
+  /* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+  /* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+  /* Add an active class to highlight the current page */
+.topnav a.active {
+    background-color: #0d6575;
+    color: white;
+}
+
+  /* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
 
 /************************* hero section ************************/
 
@@ -57,8 +102,317 @@ nav {font-family:Zelda;
         border-radius:20px;
         } 
 
-/************************* responsividad ***********************/
+/********************** Intro section **************************/
 
-@media only screen and (width<650px){
-    #wrapper {width:95%;}
+#intro {padding:5%;
+        border-bottom:2px solid rgb(255, 170, 72);}
+
+#intro .titulo {margin-top: 2vh;}
+
+#drakkar {width:40%;            /* para que la foto no se salga indicar el ancho siempre */
+            float:left;         /* foto pegada a la izquierda */
+            margin:20px 20px 20px 0;} /* que corra el aire al rededor de la foto */
+
+#intro p::first-letter {font-size:1.5em;
+color:rgb(255, 170, 72);
+}
+
+#intro p {text-align:justify;}
+
+/***************** section ejemplo-grid-2 **********************/
+
+.grid-2 {display:grid; /* el contenedor va a ser dividido en columnas */
+        grid-template-columns:50% 50%;} 
+
+.col-2 {padding:4%;}
+
+
+#ejemplo-grid-2 img {width:100%;}
+
+#ejemplo-grid-2 button {
+    position: relative;
+    font-size: 0.8em;
+    font-family:texto;
+    text-shadow:0px 0px 2px rgb(52, 255, 86);
+    padding: 0.5em 1em;
+    background-color:rgb(0, 65, 90);
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5em;
+    color:white;
+    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+}
+
+#ejemplo-grid-2 button::before {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgb(56, 113, 136) 0%, rgb(56, 113, 136) 50%, rgb(0, 52, 73) 50%, rgba(0, 65, 90) 60%);
+    border-radius: 0 0 0.5em 0;
+    box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+#ejemplo-grid-2 button:hover::before {
+    width: 1.6em;
+    height: 1.6em;
+}
+
+#ejemplo-grid-2 button:active {
+    box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+    transform: translate(0.1em, 0.1em);
+}
+
+/******************+++ section mitos ***************************/
+/* Style the buttons that are used to open and close the accordion panel */
+
+
+#Accordion h2,h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;    
+}
+#Accordion h2{
+    font-size: 18px;
+}
+#Accordion ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+#Accordion ul li{
+    position: relative;
+    padding-bottom: 4px;
+    padding-top: 18px;
+    border-top: 1px solid #dce7eb;   
+}
+#Accordion ul li input[type="checkbox"]{
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+}
+#Accordion ul li i{
+    position: absolute;
+    transform: translate(-6px,0);
+    margin-top: 16px;
+    right: 0;
+} 
+#Accordion ul li input[type=checkbox]:checked ~ p {
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    transform: translateX(-50%);
+}
+
+#Accordion ul li input[type="checkbox"]:checked~i::before{
+    transform: translate(2px,0) rotate(45deg);
+}
+#Accordion ul li input[type="checkbox"]:checked~i::after{
+    transform: translate(-2px,0) rotate(-45deg);
+}
+#Accordion ul li i::before,ul li i::after{
+    content: "";
+    position: absolute;
+    background: #333;
+    width: 3px;
+    height: 9px;
+}
+#Accordion ul li i::before{
+    transform: translate(-2px,0)rotate(45deg);
+}
+#Accordion ul li i:after {
+    transform: translate(2px, 0) rotate(-45deg);
+}
+#Accordion {
+    line-height: 26px;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0 11px;
+    max-height: 800px;
+    margin-top: 14px;
+    opacity: 1;
+    transform: translate(0,0);
+    overflow: hidden;     
+}
+#Accordion .transition, p, ul li i:before, ul li i:after {
+    transition: all 0.25s ease-in-out;
+    
+}
+#Accordion .flipIn, h1, ul li {
+    animation: flipdown 0.5s ease both;
+}
+#Accordion ul li:nth-of-type(1) {
+    animation-delay: 0.5s;
+}
+#Accordion ul li:nth-of-type(2) {
+    animation-delay: 0.75s;
+}
+#Accordion ul li:nth-of-type(3) {
+    animation-delay: 1s;
+}
+#Accordion ul li:last-of-type {
+    padding-bottom: 0;
+}
+
+@keyframes flipdown {
+    0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+    }
+    5% {
+    opacity: 1;
+    }
+    80% {
+    transform: rotateX(8deg);
+    }
+    83% {
+    transform: rotateX(6deg);
+    }
+    92% {
+    transform: rotateX(-3deg);
+    }
+    100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+    }
+}
+
+
+/********************* section fotos ***************************/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    }
+
+  /* Create four equal columns that sits next to each other */
+    .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+    }
+
+    .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    }
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container2 {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    }
+
+  /* Make the image to responsive */
+    .image {
+    display: block;
+    width: 100%;
+    height: auto;
+    }
+
+  /* The overlay effect - lays on top of the container and over the image */
+    .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.8); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 0.7em;
+    padding: 10px;
+    text-align: center;
+    }
+
+  /* When you mouse over the container, fade in the overlay title */
+    .container2:hover .overlay {
+    opacity: 1;
+    }
+
+/********************* section galery **************************/
+
+#gallery {padding:5% 0;}
+
+.grid-4 {display:grid;
+        grid-template-columns: auto auto auto auto;}
+
+#gallery img {width:100%;
+                opacity:0.7;}
+
+#gallery img:hover {opacity:1;}
+
+.col-4 {padding:4%;
+        border:1px solid rgb(255, 170, 72);}
+
+#gallery h3 {font-family:Zelda;
+            text-align: center;}
+
+/********************** responsividad **************************/
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+    }
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+    }
+
+@media only screen and (width<900px){ /***** para la tablet ********/
+    .grid-4 {grid-template-columns:50% 50%;}
+    body {background-size: 60%;}
+    #hero {padding-top:50px;}
+}
+
+@media only screen and (width<650px){ /***** para el movil ********/
+    #wrapper {width:95%;
+        box-shadow:0px 0px 20px rgb(70, 186, 221);}
+    #drakkar {width:100%;}
+    body {background-size: 80%;}
+    #hero {padding-top:50px;}
+    .grid-2 {grid-template-columns:100%;}
+    .grid-4 {grid-template-columns:100%;}
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+    float: right;
+    display: block;
+    }
+}
+
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+    .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    }
 }
