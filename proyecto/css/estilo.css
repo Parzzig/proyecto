@@ -1,7 +1,7 @@
 /**********************************************************/
 /*              style for index.html                      */
 /*              autor: Gonzalo Navajas Garcia             */ 
-/*              version: 1.0                              */
+/*              version: 3.0                              */
 /*              coment: proyecto final de curso           */
 /**********************************************************/
 
@@ -90,9 +90,9 @@ nav {font-family:Zelda;
 /************************* hero section ************************/
 
 #hero {background-image:url(../img/ZeldaHero.jpg);
-        height:95vh; /* forzar el alto de la hero para ver la foto */
-        background-size:cover; /* estira la foto para verla entera */
-        background-position:50%;/* donde esta el punto de interes de la foto */
+        height:95vh; 
+        background-size:cover; 
+        background-position:50%;
         font-family:Zelda;
         text-align:center;
         color:black;
@@ -109,9 +109,9 @@ nav {font-family:Zelda;
 
 #intro .titulo {margin-top: 2vh;}
 
-#drakkar {width:40%;            /* para que la foto no se salga indicar el ancho siempre */
-            float:left;         /* foto pegada a la izquierda */
-            margin:20px 20px 20px 0;} /* que corra el aire al rededor de la foto */
+#drakkar {width:40%;            
+            float:left;         
+            margin:20px 20px 20px 0;}
 
 #intro p::first-letter {font-size:1.5em;
 color:rgb(255, 170, 72);
@@ -121,7 +121,7 @@ color:rgb(255, 170, 72);
 
 /***************** section ejemplo-grid-2 **********************/
 
-.grid-2 {display:grid; /* el contenedor va a ser dividido en columnas */
+.grid-2 {display:grid; 
         grid-template-columns:50% 50%;} 
 
 .col-2 {padding:4%;}
@@ -133,6 +133,7 @@ color:rgb(255, 170, 72);
     position: relative;
     font-size: 0.8em;
     font-family:texto;
+    font-weight: bolder;
     text-shadow:0px 0px 2px rgb(52, 255, 86);
     padding: 0.5em 1em;
     background-color:rgb(0, 65, 90);
@@ -166,7 +167,7 @@ color:rgb(255, 170, 72);
     transform: translate(0.1em, 0.1em);
 }
 
-/******************+++ section mitos ***************************/
+/****************** section mitos acordeon ***************************/
 /* Style the buttons that are used to open and close the accordion panel */
 
 
@@ -359,21 +360,70 @@ color:rgb(255, 170, 72);
 #gallery h3 {font-family:Zelda;
             text-align: center;}
 
+/********************* footer **************************/
+
+footer {
+    background-color: #1f262b;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    font-family: 'texto', cursive;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffa500;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.triforce {
+    font-size: 30px;
+    color: #ffa500;
+}
+
+/* Nuevos estilos para las redes sociales */
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #ffa500;
+}
+
 /********************** responsividad **************************/
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-    .column {
-        flex: 50%;
-        max-width: 50%;
-    }
-    }
-
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
+ /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (width< 650px) {
     .column {
         flex: 100%;
         max-width: 100%;
+    }
+    }
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (width< 900px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
     }
     }
 
@@ -394,7 +444,7 @@ color:rgb(255, 170, 72);
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
     float: right;
@@ -403,7 +453,7 @@ color:rgb(255, 170, 72);
 }
 
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
     position: absolute;
