@@ -1,7 +1,7 @@
 /**********************************************************/
 /*              style for index.html                      */
 /*              autor: Gonzalo Navajas Garcia             */ 
-/*              version: 3.0                              */
+/*              version: 5.0                              */
 /*              coment: proyecto final de curso           */
 /**********************************************************/
 
@@ -109,7 +109,7 @@ nav {font-family:Zelda;
 
 #intro .titulo {margin-top: 2vh;}
 
-#drakkar {width:40%;            
+#LinkMountain {width:40%;            
             float:left;         
             margin:20px 20px 20px 0;}
 
@@ -363,7 +363,7 @@ color:rgb(255, 170, 72);
 /********************* footer **************************/
 
 footer {
-    background-color: #1f262b;
+    background-color: #0b151d;
     color: #fff;
     text-align: center;
     padding: 40px;
@@ -381,15 +381,21 @@ footer a:hover {
     color: #ffa500;
 }
 
+footer a {
+    font-size: 0.85em;
+}
+
+.fa {
+    margin: auto;
+}
+
 footer p {
     margin: 10px 0;
     font-size: 16px;
 }
 
-.triforce {
-    font-size: 30px;
-    color: #ffa500;
-}
+.nav a {font-size: 0.6em;
+        color: rgb(70, 186, 221);}
 
 /* Nuevos estilos para las redes sociales */
 .footer-social {
